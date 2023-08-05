@@ -1,0 +1,118 @@
+.modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.modal.nactive {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal__content {
+    padding: 44px 30px;
+    border-radius: 50px;
+    background-color: #fff;
+    transform: scale(0.5);
+    transition: 0.4s all;
+}
+
+.cross {
+    margin-left: auto;
+}
+
+.cross, .cross img {
+    background: #fff;
+}
+
+.cross img {
+    border: 1px solid #FD541F;
+    border-radius: 50%;
+    padding: 7px;
+    margin-left: 580px;
+}
+
+.modal__content.nactive {
+    transform: scale(1);
+}
+
+.form-fields {
+    background: #fff;
+}
+
+textarea {
+    background: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    border-radius: 11px;
+    resize: none;
+    width: 98%;
+    height: 134px;
+    padding: 12px 0 0 13px;
+    color: #101114;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.register-form-container, .form-field  {
+    background-color: #fff;
+}
+
+.form__title {
+    font-weight: 900;
+    font-size: 40px;
+    text-align: center;
+    color: #101114;
+    background: #fff;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+    line-height: 57px;
+}
+
+.form-field input, .form-tel input {
+    color: #101114;
+    font-size: 15px;
+    font-weight: 500;
+    height: 55px;
+    border-radius: 11px;
+    background-color: #F1F1F1;
+    padding-left: 20px;
+}
+
+.form-field {
+    border-radius: 11px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.form-field input {
+    width: 600px;
+    border: 1px solid #f1f1f1;
+}
+
+.form-tel {
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.form-tel input {
+    width: 270px;
+    border: 1px solid #f1f1f1;
+}
+
+.form-tel input:not(:last-child) {
+    margin-right: 38px;
+}
+
+.MyButton_myBtn__2yioc {
+    padding: 13px 62px;
+}

@@ -1,0 +1,9 @@
+.myBtn {
+    padding: 17px 30px;
+    background: linear-gradient(264.25deg, #FD541F 7.19%, #EB1E1E 43.43%, #981616 91.18%);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}

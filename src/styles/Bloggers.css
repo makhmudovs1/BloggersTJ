@@ -1,0 +1,218 @@
+.bloggers__title {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 69.13px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.bloggers__text {
+    color: #A0A0A0;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.blogger__img {
+    background-color: #000;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    margin: auto;
+}
+
+.followers, .likes {
+    display: flex;
+    justify-content: space-between;
+    background-color: #101114;
+}
+
+.followers__text, .likes__text {
+    color: #A0A0A0;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.likes {
+    padding: 13px 0;
+}
+
+.followers__count, .likes__count {
+    margin-left: 39px;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.blogger__name {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 17px;
+}
+
+.blogger__link {
+    text-align: center;
+}
+
+span:after {
+    content: 'Выбрать';
+    margin: 0 auto;
+    background-color: #101114;
+    color: #FD541F;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    background: #101114;
+    border: 1px solid #3B3C3F;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+
+input[type="checkbox"]:after {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+    color: #fff;
+    display: none;
+}
+
+input[type="checkbox"]:checked:after {
+    display: block;
+    color: #981616;
+}
+
+.mark:has(input[type=checkbox]:checked) ~ .blogger__link span:after{
+    content: 'Выбрано';
+    color: #A0A0A0;
+}
+
+.mark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mark__check {
+    background-color: #101114;
+}
+
+.mark, .mark__id, .blogger__name, .followers__count, .followers__text, .likes__text, .likes__count, .blogger__link {
+    background-color: #101114;
+}
+
+.posts {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.posts__blogger {
+    color: #fff;
+    background-color: #101114;
+    padding: 29px 19px;
+    border-radius: 21px;
+    border: 1px solid #101114;;
+    margin-right: 15px;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel div {
+    color: #fff;
+    font-size: 17px;
+    line-height: 28px;
+    border: 1px solid #25262B;
+    padding: 3px 12px;
+    border-radius: 7px;
+}
+
+.carousel div:not(:last-child) {
+    margin-right: 10px;
+}
+
+.firstArrow, .secondArrow {
+    position: absolute;
+    transform: translateY(50%);
+}
+
+.secondArrow {
+    right: 60px;
+    transform: translateY(-160%);
+}
+
+.firstArrow {
+    left: 60px;
+}
+
+.wrapper {
+    padding: 30px 0;
+}
+
+/*MODAL!!!*/
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+}
+
+.img {
+    width: 308px;
+    height: 320px;
+    background-color: #000;
+    border-radius: 37px;
+}
+
+.fields {
+    margin-left: 40px;
+    background: transparent;
+}
+
+.title {
+    color: #101114;
+    font-size: 40px;
+    line-height: 57px;
+    background-color: #fff;
+    padding-bottom: 20px;
+}
+
+.comments, .live,.index, .comments__text, .comments__count, .live__text, .live__count, .index__text, .index__count, .new-followers, .new-followers__text, .new-followers__count, .new-likes, .new-likes__text, .new-likes__count {
+    background-color: #fff;
+    color: #101114;
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-followers, .new-likes, .comments, .live, .index {
+    padding-bottom: 20px;
+}
+
+.new-cross {
+    margin-left: auto;
+}
+
+.new-cross, .new-cross img {
+    background: #fff;
+}
+
+.new-cross img {
+    border: 1px solid #FD541F;
+    border-radius: 50%;
+    padding: 7px;
+    margin: 0 0 10px 650px;
+}
+

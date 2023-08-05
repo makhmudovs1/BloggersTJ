@@ -1,0 +1,56 @@
+.audience {
+    text-align: center;
+    color: #fff;
+    padding: 200px 0;
+}
+
+.audience__text {
+    width: 430px;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 34.75px;
+    padding: 44px 0;
+}
+
+.absolute {
+    /*position: absolute;*/
+    background-color: transparent;
+}
+
+.audience__img, .audience__img img {
+    background-color: transparent;
+}
+
+.firstImg {
+    margin-right: 566px;
+}
+
+.secondImg {
+    right: 734px;
+    top: 235px;
+    /*position: absolute;*/
+}
+
+.thirdImg {
+    top: 242px;
+    right: 430px;
+    /*position: absolute;*/
+}
+
+.four {
+    margin-top: 103px;
+    margin-right: 52px;
+}
+
+.five {
+    position: absolute;
+    left: 241px;
+    bottom: -102px;
+}
+
+.six {
+    position: absolute;
+    right: 318px;
+    bottom: -150px;
+}
