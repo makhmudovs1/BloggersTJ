@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/BloggersTJ/static/css/main.c7db79c0.css",
+    "main.css": "/BloggersTJ/static/css/main.3ac18927.css",
     "main.js": "/BloggersTJ/static/js/main.7f9f6679.js",
     "static/media/1.png": "/BloggersTJ/static/media/1.ed41fb88f083dc550d63.png",
     "static/media/3.png": "/BloggersTJ/static/media/3.bf5424e46182efc065ae.png",
@@ -11,11 +11,11 @@
     "static/media/Tajikistanbloggers.svg": "/BloggersTJ/static/media/Tajikistanbloggers.d02e60b142515c1297f63327b149c31a.svg",
     "static/media/frame.svg": "/BloggersTJ/static/media/frame.a3bb0e173eb5be8511a31dc4246a0a4a.svg",
     "index.html": "/BloggersTJ/index.html",
-    "main.c7db79c0.css.map": "/BloggersTJ/static/css/main.c7db79c0.css.map",
+    "main.3ac18927.css.map": "/BloggersTJ/static/css/main.3ac18927.css.map",
     "main.7f9f6679.js.map": "/BloggersTJ/static/js/main.7f9f6679.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7db79c0.css",
+    "static/css/main.3ac18927.css",
     "static/js/main.7f9f6679.js"
   ]
 }
