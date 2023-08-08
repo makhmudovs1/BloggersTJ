@@ -5,22 +5,22 @@ import Pagination from "./pagination";
 import FirstArrow from "../images/Arrow1.png";
 import SecondArrow from "../images/Arrow2.png";
 
-const Bloggers = () => {
+const Bloggers = ({count, setCount, arr, setArr, str}) => {
     const [posts, setPosts] = useState([
-        {id: 1, name: 'Zanjabil Bro', followers: '392.2 Млн', likes: '4.65 Млрд'},
-        {id: 2, name: 'Baron TJK', followers: '392.2 Млн', likes: '4.65 Млрд'},
-        {id: 3, name: 'Corleon', followers: '392.2 Млн', likes: '4.65 Млрд'},
-        {id: 4, name: 'Shabnami Surayo', followers: '392.2 Млн', likes: '4.65 Млрд'},
-        {id: 5, name: 'Nigina Amonqulova', followers: '392.2 Млн', likes: '4.65 Млрд'},
+        {id: 1, img: "", name: 'Zanjabil Bro', followers: '392.2 Млн', likes: '4.65 Млрд'},
+        {id: 2, img: "", name: 'Baron TJK', followers: '392.2 Млн', likes: '4.65 Млрд'},
+        {id: 3, img: "", name: 'Corleon', followers: '392.2 Млн', likes: '4.65 Млрд'},
+        {id: 4, img: "", name: 'Shabnami Surayo', followers: '392.2 Млн', likes: '4.65 Млрд'},
+        {id: 5, img: "", name: 'Nigina Amonqulova', followers: '392.2 Млн', likes: '4.65 Млрд'},
     ])
     const [posts2, setPosts2] = useState([
-        {id: 1, name: 'Bro', followers: '392.2 Млн', likes: '4.65 Млрд'},
-        {id: 2, name: ' TJK', followers: '392.2 Млн', likes: '4.65 Млрд'},
-        {id: 3, name: 'Corleon', followers: '392.2 Млн', likes: '4.65 Млрд'},
-        {id: 4, name: 'Shabnami Surayo', followers: '392.2 Млн', likes: '4.65 Млрд'},
-        {id: 5, name: 'Nigina Amonqulova', followers: '392.2 Млн', likes: '4.65 Млрд'},
+        {id: 1, img: "", name: 'Bro', followers: '392.2 Млн', likes: '4.65 Млрд'},
+        {id: 2, img: "", name: ' TJK', followers: '392.2 Млн', likes: '4.65 Млрд'},
+        {id: 3, img: "", name: 'Corleon Bro', followers: '392.2 Млн', likes: '4.65 Млрд'},
+        {id: 4, img: "", name: 'Shabnam', followers: '392.2 Млн', likes: '4.65 Млрд'},
+        {id: 5, img: "", name: 'Nigina', followers: '392.2 Млн', likes: '4.65 Млрд'},
     ])
-    const count = 10;
+    const cnt = 10;
     const pageSize = 4;
     const [currentPage, setCurrentPage] = useState(1);
     const newArr = [...posts, ...posts2];
@@ -106,10 +106,10 @@ const Bloggers = () => {
                     </div>
                     <img id="right" className="secondArrow" src={SecondArrow} alt="Arrow 2"/>
                 </div>
-                <PostList posts = {posts}/>
-                <PostList posts = {posts2}/>
+                <PostList posts = {posts} count = {count} setCount = {setCount} arr={arr} setArr={setArr} str={str}/>
+                <PostList posts = {posts2} count = {count} setCount = {setCount} arr={arr} setArr={setArr} str={str}/>
                 <Pagination
-                    itemsCount={count}
+                    itemsCount={cnt}
                     pageSize={pageSize}
                     currentPage = {currentPage}
                     onPageChange={handlePageChange}

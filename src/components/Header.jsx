@@ -4,16 +4,18 @@ import "../styles/Header.css";
 import MyModal from "./UI/modal/MyModal";
 import MyButton from "./UI/button/MyButton";
 import image from "../images/Color.png";
+import HeaderModal from "./HeaderModal";
 
-const Header = () => {
+const Header = ({count, arr, setArr}) => {
     const [modalActive, setModalActive] = useState(false);
+    const [activeModal, setActiveModal] = useState(false);
     return (
         <div className="container">
             <div className="header">
-                <img src={logo} alt="tajikistan bloggers"/>
+                <img src={logo} alt="#"/>
                 <div className="btn">
-                    <button className="btn__left">
-                        Выбрано блогеров
+                    <button className="btn__left"  onClick={() => setActiveModal(true)}>
+                        Выбрано блогеров <div className={count === 0 ? "none" : "btn__count"}> {count} </div>
                     </button>
                     <button className="btn__right" onClick={() => setModalActive(true)}>
                         Отправить заявку
@@ -42,6 +44,7 @@ const Header = () => {
                             </div>
                         </div>
                     </MyModal>
+                    <HeaderModal active={activeModal} setActive={setActiveModal} post={arr} setArr={setArr}/>
                 </div>
             </div>
         </div>

@@ -61,6 +61,24 @@ span:after {
     color: #FD541F;
 }
 
+.blogger__link .selected span:after {
+    content: 'Выбрано';
+    margin: 0 auto;
+    background-color: #101114;
+    color: #FD541F;
+}
+
+.posts__blogger.selected {
+    /*width: 100px;*/
+    /*height: 100px;*/
+    border: 1px solid #981616;
+    box-shadow: 0 0 20px rgba(253, 84, 31, 0.46),
+    0 0 40px rgba(235, 30, 30, 0.46),
+    0 0 0 rgba(152, 22, 22, 0.46);
+    transition: 0.5s;
+}
+
+
 input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
@@ -140,7 +158,7 @@ input[type="checkbox"]:checked:after {
 }
 
 .carousel div:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .firstArrow, .secondArrow {
@@ -149,12 +167,12 @@ input[type="checkbox"]:checked:after {
 }
 
 .secondArrow {
-    right: 60px;
+    right: 50px;
     transform: translateY(-160%);
 }
 
 .firstArrow {
-    left: 60px;
+    left: 50px;
 }
 
 .wrapper {
@@ -216,3 +234,20 @@ input[type="checkbox"]:checked:after {
     margin: 0 0 10px 650px;
 }
 
+.btn, .btn__left {
+    display: flex;
+    align-items: center;
+}
+
+.btn__count {
+    display: block;
+    margin-left: 8px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: transparent;
+    width: 30px;
+}
+
+.none {
+    display: none;
+}
