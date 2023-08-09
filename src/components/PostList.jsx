@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 import PostListModal from "./PostListModal";
 import image from "../images/Color.png";
 import MyButton from "./UI/button/MyButton";
+import {logDOM} from "@testing-library/react";
 
-const PostList = ({posts, count, setCount, arr, setArr, str}) => {
+const PostList = ({posts, count, setCount, arr, setArr}) => {
     const [active, setActive] = useState(false);
     const [clickedBlocks, setClickedBlocks] = useState({});
     const [selectedBlocks, setSelectedBlocks] = useState([]);
@@ -15,6 +16,7 @@ const PostList = ({posts, count, setCount, arr, setArr, str}) => {
             setSelectedBlocks(prevSelectedBlocks => [...prevSelectedBlocks, blockId]);
         }
     };
+    const [selectedUsers, setSelectedUsers] = useState([]);
     const handleIncrement = (blockId, post) => {
         if (!clickedBlocks[blockId]) {
             setCount(prevCount => prevCount + 1);
@@ -32,10 +34,19 @@ const PostList = ({posts, count, setCount, arr, setArr, str}) => {
                 ...prevClickedBlocks,
                 [blockId]: false
             }));
-            str = post.name;
-            // arr.includes(post.id).remove;
+
+        }
+
+    };
+    const handleClick = (blockId, post) => {
+        console.log(selectedUsers);
+        if (!selectedUsers.some(user => user.id === post.id)) {
+            setSelectedUsers(prevUsers => [...prevUsers, post]);
+        } else {
+            setSelectedUsers(prevUsers => prevUsers.filter(user => user.id !== post.id));
         }
     };
+
     return (
             <div className="posts">
                 {posts.map((post) => (
@@ -106,11 +117,10 @@ const PostList = ({posts, count, setCount, arr, setArr, str}) => {
                             </div>
                             <div className="likes__count"> {post.likes} </div>
                         </div>
-                        <div className={`blogger__link ${selectedBlocks.includes(post.id) ? 'selected' : ''}`} onClick={() => {handleCheckboxClick(post.id); handleIncrement(post.name, post);}}>
+                        <div className={`blogger__link ${selectedBlocks.includes(post.id) ? 'selected' : ''}`} onClick={() => {handleCheckboxClick(post.id); handleClick(post.name, post); handleIncrement(post.name, post);}}>
                             <span></span>
                         </div>
                     </div>
-
                 ))}
             </div>
     );

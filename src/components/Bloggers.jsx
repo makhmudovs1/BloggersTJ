@@ -5,7 +5,7 @@ import Pagination from "./pagination";
 import FirstArrow from "../images/Arrow1.png";
 import SecondArrow from "../images/Arrow2.png";
 
-const Bloggers = ({count, setCount, arr, setArr, str}) => {
+const Bloggers = ({count, setCount, arr, setArr, selectedUsers,setSelectedUsers}) => {
     const [posts, setPosts] = useState([
         {id: 1, img: "", name: 'Zanjabil Bro', followers: '392.2 Млн', likes: '4.65 Млрд'},
         {id: 2, img: "", name: 'Baron TJK', followers: '392.2 Млн', likes: '4.65 Млрд'},
@@ -106,8 +106,8 @@ const Bloggers = ({count, setCount, arr, setArr, str}) => {
                     </div>
                     <img id="right" className="secondArrow" src={SecondArrow} alt="Arrow 2"/>
                 </div>
-                <PostList posts = {posts} count = {count} setCount = {setCount} arr={arr} setArr={setArr} str={str}/>
-                <PostList posts = {posts2} count = {count} setCount = {setCount} arr={arr} setArr={setArr} str={str}/>
+                <PostList posts = {posts} count = {count} setCount = {setCount} arr={arr} setArr={setArr} selectedUsers={selectedUsers} setSelectedUsers={setSelectedUsers}/>
+                <PostList posts = {posts2} count = {count} setCount = {setCount} arr={arr} setArr={setArr} selectedUsers={selectedUsers} setSelectedUsers={setSelectedUsers}/>
                 <Pagination
                     itemsCount={cnt}
                     pageSize={pageSize}

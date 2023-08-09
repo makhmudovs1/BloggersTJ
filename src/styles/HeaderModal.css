@@ -1,3 +1,7 @@
+* {
+    background-color: #fff;
+}
+
 .new-modal {
     height: 100vh;
     width: 100vw;
@@ -34,6 +38,15 @@
     background-color: #fff;
 }
 
+.info {
+    margin: 20px;
+}
+
+.user-block {
+    padding-bottom: 10px;
+    background-color: #fff;
+}
+
 .form__cross img {
     background-color: #fff;
     border: 1px solid #FD541F;
@@ -45,3 +58,52 @@
 .post__name {
     color: #fff;
 }
+
+.users__about,.users__cross, .user__cross, .user__img, .user__info, .user__name, .user__followers {
+    background-color: #fff;
+}
+
+.users__about {
+    display: flex;
+}
+
+.info {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info__count, .info__avg {
+    color: #101114;
+    font-weight: 900;
+    font-size: 16px;
+    background-color: #fff;
+    text-transform: uppercase;
+}
+
+.user__img {
+    width: 50px;
+    height: 50px;
+    background: #000;
+    border-radius: 50px;
+    padding: 0 7px;
+}
+
+.user__info {
+    margin-left: 20px;
+}
+
+.user__name {
+    color: #101114;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.user__followers {
+    color: #101114;
+    font-weight: 400;
+    font-size: 15px;
+
+}
+

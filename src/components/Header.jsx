@@ -6,7 +6,7 @@ import MyButton from "./UI/button/MyButton";
 import image from "../images/Color.png";
 import HeaderModal from "./HeaderModal";
 
-const Header = ({count, arr, setArr}) => {
+const Header = ({count, arr, setArr, selectedUsers, setSelectedUsers}) => {
     const [modalActive, setModalActive] = useState(false);
     const [activeModal, setActiveModal] = useState(false);
     return (
@@ -44,7 +44,7 @@ const Header = ({count, arr, setArr}) => {
                             </div>
                         </div>
                     </MyModal>
-                    <HeaderModal active={activeModal} setActive={setActiveModal} post={arr} setArr={setArr}/>
+                    <HeaderModal active={activeModal} setActive={setActiveModal} post={arr} setArr={setArr} count={count} selectedUsers={selectedUsers} setSelectedUsers={setSelectedUsers}/>
                 </div>
             </div>
         </div>

@@ -8,13 +8,13 @@ import Bloggers from "./components/Bloggers";
 function App() {
     const [count, setCount] = useState(0);
     const [arr, setArr] = useState([]);
-    const [str, setStr] = useState("");
+    const [selectedUsers, setSelectedUsers] = useState([]);
   return (
     <div className="App">
-      <Header count = {count} arr={arr} setArr={setArr}/>
+      <Header count = {count} arr={arr} setArr={setArr} selectedUsers={selectedUsers} setSelectedUsers={setSelectedUsers}/>
       <Audience/>
       <Service/>
-      <Bloggers count = {count} setCount = {setCount} arr = {arr} setArr = {setArr} str={str}/>
+      <Bloggers count = {count} setCount = {setCount} arr = {arr} setArr = {setArr} selectedUsers={selectedUsers} setSelectedUsers={setSelectedUsers}/>
     </div>
   );
 }
